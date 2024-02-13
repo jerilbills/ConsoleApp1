@@ -11,11 +11,11 @@ namespace ConsoleApp1
         public void Run() 
         {
             Dictionary<string, string> moves = new Dictionary<string, string>()
-        {
-            {"r", "rock" },
-            {"p", "paper" },
-            {"s", "scissors" }
-        };
+            {
+                {"r", "rock" },
+                {"p", "paper" },
+                {"s", "scissors" }
+            };
             // Give instructions to user
             Console.WriteLine("Welcome to Rock Paper Scissors.");
             Console.WriteLine("I will be your opponent. The instructions are as follows:");
@@ -46,5 +46,6 @@ namespace ConsoleApp1
             string cpumove = cpu.CpuMove();
             Console.WriteLine($"Opponent chose {cpumove}");
         }
+        //public bool isWinner();
     }
 }
