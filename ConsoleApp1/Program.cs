@@ -3,11 +3,11 @@ using System.Security.Cryptography.X509Certificates;
 
 public class Program
 {
+    public string[] moves = { "rock", "paper", "scissors" };
     // Returns a random move.
     private string cpuMove()
     {
         Random rnd = new Random();
-        string[] moves = { "rock", "paper", "scissors" };
         // chooses a random number between 0 and the length of the array
         // minus 1
         int moveIndex = rnd.Next(0, moves.Length);
