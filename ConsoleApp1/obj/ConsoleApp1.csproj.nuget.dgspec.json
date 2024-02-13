@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jeril\\Projects\\ConsoleApp1\\ConsoleApp1\\ConsoleApp1.csproj": {}
+    "C:\\Users\\icu20\\workspace\\first-projects\\rock-paper-scissors\\ConsoleApp1\\ConsoleApp1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jeril\\Projects\\ConsoleApp1\\ConsoleApp1\\ConsoleApp1.csproj": {
+    "C:\\Users\\icu20\\workspace\\first-projects\\rock-paper-scissors\\ConsoleApp1\\ConsoleApp1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jeril\\Projects\\ConsoleApp1\\ConsoleApp1\\ConsoleApp1.csproj",
+        "projectUniqueName": "C:\\Users\\icu20\\workspace\\first-projects\\rock-paper-scissors\\ConsoleApp1\\ConsoleApp1.csproj",
         "projectName": "ConsoleApp1",
-        "projectPath": "C:\\Users\\jeril\\Projects\\ConsoleApp1\\ConsoleApp1\\ConsoleApp1.csproj",
-        "packagesPath": "C:\\Users\\jeril\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jeril\\Projects\\ConsoleApp1\\ConsoleApp1\\obj\\",
+        "projectPath": "C:\\Users\\icu20\\workspace\\first-projects\\rock-paper-scissors\\ConsoleApp1\\ConsoleApp1.csproj",
+        "packagesPath": "C:\\Users\\icu20\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\icu20\\workspace\\first-projects\\rock-paper-scissors\\ConsoleApp1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\jeril\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\icu20\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
