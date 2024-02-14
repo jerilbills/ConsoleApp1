@@ -2,7 +2,7 @@ Rock Paper Scissors
 
 Authors: 
 Ifeyinwa (Iffie) Uwazie:
-  LinkedIn: linkedin.com/in/ifeyinwauwazie
+  LinkedIn: linkedin.com/in/ifeyinwauwazie;
 Jeril Bills
   LinkedIn: linkedin.com/in/jerilbills
 
