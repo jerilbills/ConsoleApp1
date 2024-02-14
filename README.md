@@ -10,4 +10,4 @@ Description: This program will generate a Rock paper scissors game allowing a us
 
 Technologies used: C# and Visual Studio 
 
-As new developers, we watned to write a simple console app to start out. We hope to add text art graphics as we develop this. We may later make it object-oriented and add a front end for a full-stack application.
+As new developers, we watned to write a simple console app to start out. We hope to add text art graphics as we develop this. We may later make it more object-oriented and add a front end for a full-stack application.
