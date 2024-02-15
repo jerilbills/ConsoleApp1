@@ -23,7 +23,7 @@ namespace ConsoleApp1
             Console.WriteLine("Rock smashes scissors. Paper covers rock. Scissors cut paper.");
             Console.WriteLine("Matching moves result in a tie.");
             //code for rock->paper->scissors count down
-            Thread.Sleep(18000);
+            Thread.Sleep(10000);
 
 
             Console.WriteLine($"Rock!");
@@ -43,9 +43,30 @@ namespace ConsoleApp1
             string userMove = moves[userInputCaseInsensitive];
             //method HERE for CPU's random move
             ComputerPlayer cpu = new ComputerPlayer();
-            string cpumove = cpu.CpuMove();
-            Console.WriteLine($"Opponent chose {cpumove}");
+            string cpuMove = cpu.CpuMove();
+            Console.WriteLine($"Opponent chose {cpuMove}");
+            //instantiate a new Scorekeeper to return result (by updating the score and telling the user what current score is)
+            Scorekeeper scorekeeper = DetermineWinner(userMove, cpuMove);
+            Console.WriteLine(scorekeeper.ToString());
         }
-        //public bool isWinner();
+        public Scorekeeper DetermineWinner(string player1Move, string player2Move)
+        {
+            Scorekeeper score = new Scorekeeper();
+            if (!(player1Move == player2Move))
+            {
+                if (player1Move == "rock" && player2Move == "scissors" ||
+                player1Move == "paper" && player2Move == "rock" ||
+                player1Move == "scissors" && player2Move == "paper")
+                {
+                    score.Player1Score++;
+                }
+                else
+                {
+                    score.Player2Score++;
+                }
+            }
+
+            return score;
+        }
     }
 }
