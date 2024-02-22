@@ -17,7 +17,40 @@ namespace ConsoleApp1
 
         public override string ToString()
         {
-            return $"The score is: Player 1: {Player1Score} Computer: {Player2Score}";
+            return $"Player 1: {Player1Score} Computer: {Player2Score}";
+        }
+
+        public Scorekeeper DetermineWinner(string player1Move, string player2Move, Scorekeeper scorekeeper)
+        {
+            
+            if (!(player1Move == player2Move))
+            {
+                if (player1Move == "rock" && player2Move == "scissors" ||
+                player1Move == "paper" && player2Move == "rock" ||
+                player1Move == "scissors" && player2Move == "paper")
+                {
+                    scorekeeper.Player1Score++;
+                }
+                else
+                {
+                    scorekeeper.Player2Score++;
+                }
+            }
+            return scorekeeper;
+        }
+
+        public Scorekeeper GameWinner(Scorekeeper gameOver)
+        {
+            if (Player1Score > Player2Score)
+            {
+                Console.WriteLine($"Player 1, you're the winner!");
+            }
+            else
+            {
+                Console.WriteLine($"Player 1, you lost!");
+            }
+            return gameOver;
+                
         }
     }
 }

@@ -16,9 +16,9 @@ namespace ConsoleApp1
                 {"p", "paper" },
                 {"s", "scissors" }
             };
-            Scorekeeper scorekeeper = new Scorekeeper();
+            Scorekeeper keptScore = new Scorekeeper();
 
-            while (Math.Abs(scorekeeper.Player1Score - scorekeeper.Player2Score) < 2)
+            while (Math.Abs(keptScore.Player1Score - keptScore.Player2Score) < 2)
             {
                 Console.WriteLine($"Rock!");
                 Thread.Sleep(2000); //Wait for 1 second
@@ -39,11 +39,14 @@ namespace ConsoleApp1
                 ComputerPlayer cpu = new ComputerPlayer();
                 string cpuMove = cpu.CpuMove();
                 Console.WriteLine($"Opponent chose {cpuMove}");
-                //instantiate a new Scorekeeper to return result (by updating the score and telling the user what current score is)
-                scorekeeper = DetermineWinner(userMove, cpuMove);
-                Console.WriteLine(scorekeeper.ToString());
+                
+                keptScore.DetermineWinner(userMove, cpuMove, keptScore);
+                Console.WriteLine(keptScore);
 
             }
+            Console.WriteLine($"GAME OVER! The final score is {keptScore}. Way to play!");
+            //Scorekeeper.GameWinner(keptScore);
+            //tidy end of game after a win by 2
         }
         public void Run() 
         {
@@ -60,24 +63,6 @@ namespace ConsoleApp1
             Gameplay();
                         
         }
-        public Scorekeeper DetermineWinner(string player1Move, string player2Move)
-        {
-            Scorekeeper score = new Scorekeeper();
-            if (!(player1Move == player2Move))
-            {
-                if (player1Move == "rock" && player2Move == "scissors" ||
-                player1Move == "paper" && player2Move == "rock" ||
-                player1Move == "scissors" && player2Move == "paper")
-                {
-                    score.Player1Score++;
-                }
-                else
-                {
-                    score.Player2Score++;
-                }
-            }
-
-            return score;
-        }
+        
     }
 }
