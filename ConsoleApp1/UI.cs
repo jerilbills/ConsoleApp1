@@ -46,6 +46,14 @@ namespace ConsoleApp1
             }
             Console.WriteLine($"GAME OVER! The final score is {keptScore}. Way to play!");
             //Scorekeeper.GameWinner(keptScore);
+            if (keptScore.Player1Score > keptScore.Player2Score) 
+            {
+                Console.WriteLine($"Player 1, you're the winner!");
+            }
+            else
+            {
+                Console.WriteLine($"Player 1, you lost!");
+            }
             //tidy end of game after a win by 2
         }
         public void Run() 
