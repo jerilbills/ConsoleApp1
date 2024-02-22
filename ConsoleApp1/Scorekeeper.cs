@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 namespace ConsoleApp1
 {
     //method to add score to winner after round
-    //method to display score for game after round
+    //continue play through 3 rounds
+    //method to display score for game after each round
 
     public class Scorekeeper
     {
