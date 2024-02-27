@@ -20,15 +20,7 @@ namespace ConsoleApp1
 
             while (Math.Abs(keptScore.Player1Score - keptScore.Player2Score) < 2)
             {
-                Console.WriteLine($"Rock!");
-                Thread.Sleep(2000); //Wait for 1 second
-                Console.Clear(); //Clear the console for a countdown effect
-                Console.WriteLine($"Paper!");
-                Thread.Sleep(2000);
-                Console.Clear();
-                Console.WriteLine($"Scissors!");
-                Thread.Sleep(2000);
-                Console.Clear();
+                Countdown();
 
                 Console.WriteLine("Select your move: R, P, or S");
                 string userInput;
@@ -42,18 +34,21 @@ namespace ConsoleApp1
                 
                 keptScore.DetermineWinner(userMove, cpuMove, keptScore);
                 Console.WriteLine(keptScore);
+                Thread.Sleep(5000);
 
             }
-            Console.WriteLine($"GAME OVER! The final score is {keptScore}. Way to play!");
-            
-            if (keptScore.Player1Score > keptScore.Player2Score) 
-            {
-                Console.WriteLine($"Player 1, you're the winner!");
-            }
-            else
-            {
-                Console.WriteLine($"Player 1, you lost!");
-            }
+            Console.WriteLine($"GAME OVER! The final score is {keptScore}. Way to play! {keptScore.GameWinner()}");
+
+            //Console.WriteLine(keptScore.GameWinner());
+
+            //if (keptScore.Player1Score > keptScore.Player2Score) 
+            //{
+            //    Console.WriteLine($"Player 1, you're the winner!");
+            //}
+            //else
+            //{
+            //    Console.WriteLine($"Player 1, you lost!");
+            //}
             //tidy end of game after a win by 2
         }
         public void Run() 
@@ -70,6 +65,21 @@ namespace ConsoleApp1
             
             Gameplay();
                         
+        }
+
+        public void Countdown()
+        {
+            Console.Clear();
+            Console.WriteLine($"Rock!");
+            Thread.Sleep(2000); //Wait for 1 second
+            Console.Clear(); //Clear the console for a countdown effect
+            Console.WriteLine($"Paper!");
+            Thread.Sleep(2000);
+            Console.Clear();
+            Console.WriteLine($"Scissors!");
+            Thread.Sleep(2000);
+            Console.Clear();
+                       
         }
         
     }

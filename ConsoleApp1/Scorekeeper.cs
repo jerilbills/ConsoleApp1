@@ -39,18 +39,19 @@ namespace ConsoleApp1
             return scorekeeper;
         }
 
-        public Scorekeeper GameWinner(Scorekeeper gameOver)
+        public string GameWinner()
         {
+            
+            string player1Wins = "Player 1, you're the winner!";
+            string player1Loses = "Player 1, you lost!";
+
             if (Player1Score > Player2Score)
             {
-                Console.WriteLine($"Player 1, you're the winner!");
+                return player1Wins;
             }
-            else
-            {
-                Console.WriteLine($"Player 1, you lost!");
-            }
-            return gameOver;
-                
+           
+            return player1Loses;
+
         }
     }
 }
