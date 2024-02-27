@@ -10,29 +10,21 @@ namespace ConsoleApp1
     {
         public void Gameplay()
         {
-            Dictionary<string, string> moves = new Dictionary<string, string>()
-            {
-                {"r", "rock" },
-                {"p", "paper" },
-                {"s", "scissors" }
-            };
             Scorekeeper keptScore = new Scorekeeper();
 
+            // Checks whether anyone is leading by 2
             while (Math.Abs(keptScore.Player1Score - keptScore.Player2Score) < 2)
             {
                 Countdown();
+                string playerMove = GetUserMoves();
 
-                Console.WriteLine("Select your move: R, P, or S");
-                string userInput;
-                userInput = Console.ReadLine();
-                string userInputCaseInsensitive = userInput.ToLower();
-                string userMove = moves[userInputCaseInsensitive];
+                
                 //method HERE for CPU's random move
                 ComputerPlayer cpu = new ComputerPlayer();
                 string cpuMove = cpu.CpuMove();
                 Console.WriteLine($"Opponent chose {cpuMove}");
                 
-                keptScore.DetermineWinner(userMove, cpuMove, keptScore);
+                keptScore.DetermineWinner(playerMove, cpuMove, keptScore);
                 Console.WriteLine(keptScore);
                 Thread.Sleep(5000);
 
@@ -80,6 +72,24 @@ namespace ConsoleApp1
             Thread.Sleep(2000);
             Console.Clear();
                        
+        }
+
+        public string GetUserMoves()
+        {
+            Dictionary<string, string> moves = new Dictionary<string, string>()
+            {
+                {"r", "rock" },
+                {"p", "paper" },
+                {"s", "scissors" }
+            };
+
+            Console.WriteLine("Select your move: R, P, or S");
+            string userInput;
+            userInput = Console.ReadLine();
+            string userInputCaseInsensitive = userInput.ToLower();
+            string userMove = moves[userInputCaseInsensitive];
+
+            return userMove;
         }
         
     }
