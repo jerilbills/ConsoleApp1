@@ -84,13 +84,30 @@ namespace ConsoleApp1
                 {"p", "paper" },
                 {"s", "scissors" }
             };
+            string userMove = "";
 
-            Console.WriteLine("Select your move: R, P, or S");
-            string userInput;
-            userInput = Console.ReadLine();
-            string userInputCaseInsensitive = userInput.ToLower();
-            string userMove = moves[userInputCaseInsensitive];
+            try
+            {
+                while (!moves.ContainsKey(userMove))
+                {
+                    Console.WriteLine("Select your move: R, P, or S");
+                    string userInput;
+                    userInput = Console.ReadLine();
+                    string userInputCaseInsensitive = userInput.ToLower();
+                    userMove = moves[userInputCaseInsensitive];
+                                       
+                }
+            }
+            catch (KeyNotFoundException e)
+            {
+                Console.WriteLine("Please select r, p or s!");
+            }
+            catch (Exception)
+            {
 
+                Console.WriteLine("Oops. Something went wrong!"); 
+            }
+            
             return userMove;
         }
 
