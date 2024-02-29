@@ -8,6 +8,7 @@ namespace ConsoleApp1
 {
     public class ComputerPlayer
     {
+        //method for computer to chose random move
         public string CpuMove()
         {
             string[] moves = { "rock", "paper", "scissors" };

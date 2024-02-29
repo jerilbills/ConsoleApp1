@@ -20,6 +20,9 @@ namespace ConsoleApp1
             return $"Player 1: {Player1Score} Computer: {Player2Score}";
         }
 
+        //logic to determine winner of round
+        //takes in string player moves and current score
+        //returns updated score
         public Scorekeeper DetermineWinner(string player1Move, string player2Move, Scorekeeper scorekeeper)
         {
             
@@ -39,6 +42,7 @@ namespace ConsoleApp1
             return scorekeeper;
         }
 
+        //returns message indicating win/loss
         public string GameWinner()
         {
             
