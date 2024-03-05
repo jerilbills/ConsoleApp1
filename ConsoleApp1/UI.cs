@@ -86,29 +86,39 @@ namespace ConsoleApp1
             };
             string userMove = "";
 
-            try
+            // runs as long as userMove is not a valid move
+            while (!moves.ContainsValue(userMove))
             {
-                while (!moves.ContainsKey(userMove))
+                try
                 {
                     Console.WriteLine("Select your move: R, P, or S");
-                    string userInput;
-                    userInput = Console.ReadLine();
+                    string userInput = Console.ReadLine();
                     string userInputCaseInsensitive = userInput.ToLower();
-                    userMove = moves[userInputCaseInsensitive];
-                                       
+                    // check dictionary for user's move, throw exception if not found
+                    if (moves.ContainsKey(userInputCaseInsensitive))
+                    {
+                        userMove = moves[userInputCaseInsensitive];
+                    }
+                    else
+                    {
+                        throw new KeyNotFoundException();
+                    }
                 }
-            }
-            catch (KeyNotFoundException e)
-            {
-                Console.WriteLine("Please select r, p or s!");
-            }
-            catch (Exception)
-            {
+                //tell user move is invalid & return to "Select your move..."
+                catch (KeyNotFoundException)
+                {
+                    Console.WriteLine("You did not select a valid move!");
+                }
+                catch (Exception)
+                {
 
-                Console.WriteLine("Oops. Something went wrong!"); 
+                    Console.WriteLine("Oops. Something went wrong!");
+                }
+
             }
-            
+
             return userMove;
+
         }
 
     }

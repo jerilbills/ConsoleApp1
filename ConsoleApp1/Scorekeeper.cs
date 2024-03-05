@@ -26,7 +26,7 @@ namespace ConsoleApp1
         public Scorekeeper DetermineWinner(string player1Move, string player2Move, Scorekeeper scorekeeper)
         {
             
-            if (!(player1Move == player2Move))
+            if ((player1Move != player2Move) && (player1Move!="") && (player2Move!=""))
             {
                 if (player1Move == "rock" && player2Move == "scissors" ||
                 player1Move == "paper" && player2Move == "rock" ||
