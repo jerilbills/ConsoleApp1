@@ -10,6 +10,7 @@ namespace ConsoleApp1
     {
         //method for computer to chose random move
         public string CpuMove()
+
         {
             string[] moves = { "rock", "paper", "scissors" };
             Random rnd = new Random();
