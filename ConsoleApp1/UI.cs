@@ -24,6 +24,7 @@ namespace ConsoleApp1
             Console.WriteLine("Rock smashes scissors. Paper covers rock. Scissors cut paper.");
             Console.WriteLine("Matching moves result in a tie.");
             Console.WriteLine("Press any key to continue.");
+            Console.WriteLine("Press 'ctrl+c' at any time to quit.");
             //Thread.Sleep(10000);
             Console.ReadKey(true);
         }
