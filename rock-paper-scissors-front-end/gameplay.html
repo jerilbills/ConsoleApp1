@@ -9,9 +9,14 @@
 </head>
 <body>
     <p>Select your move!</p>
-    <button id="rock" type="button" onclick="getUserMove(this.id)">Rock</button>
-    <button id="paper" type="button" onclick="getUserMove(this.id)">Paper</button>
-    <button id="scissors" type="button" onclick="getUserMove(this.id)">Scissors</button>
+    <button id="rock" type="button" onclick="gameplay(this.id)">Rock</button>
+    <button id="paper" type="button" onclick="gameplay(this.id)">Paper</button>
+    <button id="scissors" type="button" onclick="gameplay(this.id)">Scissors</button>
+
+    <p id="score">
+    </p>
+
+    <button type="button"><a href = "gameplay.html">CONTINUE</a></button>
 
     <button type="button"><a href="index.html">QUIT</a></button>
 </body>
