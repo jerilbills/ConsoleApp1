@@ -51,3 +51,16 @@ const currentScore = {
     player1Score: 0,
     player2Score: 0
 }
+
+/**
+ * Takes a string id of the button that was clicked and returns the same string
+ * 
+ * @param {string} id id of button clicked by player 
+ * @returns {string} id of button clicked by player
+ */
+function getUserMove(id)
+{
+    userMove = id;
+
+    return userMove;
+}
